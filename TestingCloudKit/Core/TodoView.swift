@@ -24,8 +24,20 @@ struct TodoView: View {
                         .foregroundStyle(.white)
                 }
             }
+            List {
+                ForEach(viewModel.tasks, id: \.recordId) { task in
+                    TaskRow(taskModel: task, onUpdate: { editedTask in
+                        viewModel.updateTask(editedTask)
+                    })
+                }.onDelete { indexSet in
+                    viewModel.deleteTask(indexSet)
+                }
+            }
         }
         .padding(32)
+        .onAppear{
+            viewModel.fetchTaks()
+        }
     }
 }
 

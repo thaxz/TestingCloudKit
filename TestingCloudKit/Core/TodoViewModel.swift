@@ -14,6 +14,10 @@ final class TodoViewModel: ObservableObject {
     
     @Published var textfieldText: String = ""
     
+    var tasks: [TaskModel] {
+        dbManager.tasksDictionary.values.compactMap({$0})
+    }
+    
     func createTask(){
         let taskModel = TaskModel(title: textfieldText, dateAssigned: Date(), isCompleted: false)
         print(taskModel)
@@ -27,5 +31,36 @@ final class TodoViewModel: ObservableObject {
         }
     }
     
+    func fetchTaks(){
+        Task {
+            do {
+                try await dbManager.populateTasks()
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
+    func updateTask(_ editedTask: TaskModel){
+        Task {
+            do {
+                try await dbManager.updateTask(editedTask: editedTask)
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
+    func deleteTask(_ indexSet: IndexSet){
+        guard let index = indexSet.map({ $0 }).last else { return }
+        let task = dbManager.tasks[index]
+        Task {
+            do {
+                try await dbManager.deleteTask(taskToBeDeleted: task)
+            } catch {
+                print(error)
+            }
+        }
+    }
     
 }
