@@ -13,6 +13,8 @@
 		E95FFC5B2C7A3D8A00BF02C2 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95FFC5A2C7A3D8A00BF02C2 /* TaskModel.swift */; };
 		E95FFC5E2C7A401600BF02C2 /* TaskRecordKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95FFC5D2C7A401600BF02C2 /* TaskRecordKeys.swift */; };
 		E95FFC602C7A411000BF02C2 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95FFC5F2C7A411000BF02C2 /* TodoListView.swift */; };
+		E95FFC652C7A4A2C00BF02C2 /* CKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95FFC642C7A4A2C00BF02C2 /* CKManager.swift */; };
+		E9AF14182C7A664F004A0EBC /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF14172C7A664F004A0EBC /* TodoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +22,11 @@
 		E95FFC492C7A3A2E00BF02C2 /* TestingCloudKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingCloudKitApp.swift; sourceTree = "<group>"; };
 		E95FFC4D2C7A3A2F00BF02C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E95FFC502C7A3A2F00BF02C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E95FFC572C7A3A8F00BF02C2 /* TestingCloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestingCloudKit.entitlements; sourceTree = "<group>"; };
 		E95FFC5A2C7A3D8A00BF02C2 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		E95FFC5D2C7A401600BF02C2 /* TaskRecordKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRecordKeys.swift; sourceTree = "<group>"; };
 		E95FFC5F2C7A411000BF02C2 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		E95FFC642C7A4A2C00BF02C2 /* CKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKManager.swift; sourceTree = "<group>"; };
+		E9AF14172C7A664F004A0EBC /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +59,9 @@
 		E95FFC482C7A3A2E00BF02C2 /* TestingCloudKit */ = {
 			isa = PBXGroup;
 			children = (
-				E95FFC572C7A3A8F00BF02C2 /* TestingCloudKit.entitlements */,
 				E95FFC492C7A3A2E00BF02C2 /* TestingCloudKitApp.swift */,
 				E95FFC582C7A3D6C00BF02C2 /* Models */,
+				E95FFC632C7A4A1B00BF02C2 /* Managers */,
 				E95FFC592C7A3D7900BF02C2 /* Core */,
 				E95FFC4D2C7A3A2F00BF02C2 /* Assets.xcassets */,
 				E95FFC4F2C7A3A2F00BF02C2 /* Preview Content */,
@@ -87,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				E95FFC5F2C7A411000BF02C2 /* TodoListView.swift */,
+				E9AF14172C7A664F004A0EBC /* TodoViewModel.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -97,6 +101,14 @@
 				E95FFC5D2C7A401600BF02C2 /* TaskRecordKeys.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		E95FFC632C7A4A1B00BF02C2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E95FFC642C7A4A2C00BF02C2 /* CKManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,7 +181,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9AF14182C7A664F004A0EBC /* TodoViewModel.swift in Sources */,
 				E95FFC5B2C7A3D8A00BF02C2 /* TaskModel.swift in Sources */,
+				E95FFC652C7A4A2C00BF02C2 /* CKManager.swift in Sources */,
 				E95FFC5E2C7A401600BF02C2 /* TaskRecordKeys.swift in Sources */,
 				E95FFC602C7A411000BF02C2 /* TodoListView.swift in Sources */,
 				E95FFC4A2C7A3A2E00BF02C2 /* TestingCloudKitApp.swift in Sources */,
