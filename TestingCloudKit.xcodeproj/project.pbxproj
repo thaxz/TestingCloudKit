@@ -17,6 +17,7 @@
 		E9AF14182C7A664F004A0EBC /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF14172C7A664F004A0EBC /* TodoViewModel.swift */; };
 		E9AF141C2C7C0A2D004A0EBC /* FilterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF141B2C7C0A2D004A0EBC /* FilterOptions.swift */; };
 		E9AF141F2C7C0AC5004A0EBC /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF141E2C7C0AC5004A0EBC /* TaskRow.swift */; };
+		E9FB70512C8905D200550285 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB70502C8905D200550285 /* SignInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		E9AF14172C7A664F004A0EBC /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
 		E9AF141B2C7C0A2D004A0EBC /* FilterOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOptions.swift; sourceTree = "<group>"; };
 		E9AF141E2C7C0AC5004A0EBC /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
+		E9FB70502C8905D200550285 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				E9AF141D2C7C0AB6004A0EBC /* Components */,
 				E95FFC5F2C7A411000BF02C2 /* TodoView.swift */,
 				E9AF14172C7A664F004A0EBC /* TodoViewModel.swift */,
+				E9FB70502C8905D200550285 /* SignInView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9FB70512C8905D200550285 /* SignInView.swift in Sources */,
 				E9AF14182C7A664F004A0EBC /* TodoViewModel.swift in Sources */,
 				E95FFC5B2C7A3D8A00BF02C2 /* TaskModel.swift in Sources */,
 				E95FFC652C7A4A2C00BF02C2 /* CKManager.swift in Sources */,

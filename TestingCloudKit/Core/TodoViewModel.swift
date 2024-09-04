@@ -10,7 +10,7 @@ import SwiftUI
 
 final class TodoViewModel: ObservableObject {
     
-    @ObservedObject var dbManager: CKManager = CKManager()
+    @EnvironmentObject var dbManager: CKManager
     
     @Published var textfieldText: String = ""
     

@@ -11,7 +11,7 @@ import CloudKit
 @MainActor
 final class CKManager: ObservableObject {
     
-    private var database = CKContainer(identifier: "iCloud.com.br.ufpe.cin.academy.tmc4.TestingCloudKit").privateCloudDatabase
+    var database = CKContainer(identifier: "iCloud.com.br.ufpe.cin.academy.tmc4.TestingCloudKit").privateCloudDatabase
     
     @Published var tasksDictionary: [CKRecord.ID: TaskModel] = [:]
     
@@ -74,5 +74,25 @@ final class CKManager: ObservableObject {
             return tasks.filter { !$0.isCompleted }
         }
     }
+    
+    // User
+    
+    func addUser(userID: String, name: String, email: String) async throws {
+        let userRecord = CKRecord(recordType: "User")
+        userRecord["userID"] = userID as CKRecordValue
+        userRecord["name"] = name as CKRecordValue
+        userRecord["email"] = email as CKRecordValue
+        
+        try await database.save(userRecord)
+    }
+    
+    func fetchUser(userID: String) async throws -> CKRecord? {
+        let predicate = NSPredicate(format: "userID == %@", userID)
+        let query = CKQuery(recordType: "User", predicate: predicate)
+        let result = try await database.records(matching: query)
+        let records = result.matchResults.compactMap { try? $0.1.get() }
+        return records.first
+    }
+    
     
 }

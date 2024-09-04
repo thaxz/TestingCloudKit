@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct TestingCloudKitApp: App {
+    @StateObject private var ckManager = CKManager()
     var body: some Scene {
         WindowGroup {
-            TodoView()
+            SignInView()
+                .environmentObject(ckManager)
         }
     }
 }
